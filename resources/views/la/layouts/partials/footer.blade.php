@@ -3,6 +3,6 @@
     <div class="pull-right hidden-xs">
         Powered by <a href="http://darana.id/">DaranaSV</a>
     </div>
-    <strong>Copyright &copy; {{ date("Y") }}
+    Copyright &copy; {{ date("Y") }}
 </footer>
 @endif
