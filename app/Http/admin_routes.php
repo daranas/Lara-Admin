@@ -1,8 +1,6 @@
 <?php
 
-/* ================== Homepage ================== */
-Route::get('/', 'HomeController@index');
-Route::get('/home', 'HomeController@index');
+/* ================== Auth ================== */
 Route::auth();
 
 /* ================== Access Uploaded Files ================== */
