@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Route::group(array('prefix' => '/'), function () {
+//     Route::get('/', 'MainController@homePage');
+// });
+
 /* ================== Homepage + Admin Routes ================== */
 
 require __DIR__.'/admin_routes.php';
