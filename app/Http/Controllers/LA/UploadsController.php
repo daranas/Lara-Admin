@@ -105,23 +105,6 @@ class UploadsController extends Controller
 
             if(!File::exists($path))
                 abort(404);
-            
-            // Check if thumbnail
-            $size = Input::get('s');
-            if(isset($size)) {
-                if(!is_numeric($size)) {
-                    $size = 150;
-                }
-                $thumbpath = storage_path("thumbnails/".basename($upload->path)."-".$size."x".$size);
-                
-                if(File::exists($thumbpath)) {
-                    $path = $thumbpath;
-                } else {
-                    // Create Thumbnail
-                    LAHelper::createThumbnail($upload->path, $thumbpath, $size, $size, "transparent");
-                    $path = $thumbpath;
-                }
-            }
 
             $file = File::get($path);
             $type = File::mimeType($path);
