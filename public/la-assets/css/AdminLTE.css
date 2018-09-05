@@ -7821,5 +7821,11 @@ a.uploaded_file2 i.fa.fa-times {
   font-size: 11px;
   cursor: pointer;
 }
+.uploaded_files img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  display: inline-block;
+}
 
 /*# sourceMappingURL=AdminLTE.css.map */
