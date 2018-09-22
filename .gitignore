@@ -6,3 +6,4 @@ Homestead.json
 .env
 /storage/uploads
 .gitkeep
+composer.lock
