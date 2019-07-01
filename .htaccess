@@ -17,6 +17,10 @@
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Handle subdirectory
+    RewriteCond %{THE_REQUEST} /(config|app|database)/.+ [NC]
+    RewriteRule ^ - [R=403,L]
 </IfModule>
 
 <Files ~ "^.*\.([Ee][Nn][Vv])">
